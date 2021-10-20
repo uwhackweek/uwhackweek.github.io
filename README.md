@@ -1,6 +1,6 @@
-# Univeristy of Washington eScience Institute Hackweeks
+# University of Washington eScience Institute Hackweeks
 
-This is a public landing page for our 'uwhackeek' organization.
+This is a public landing page for our 'uwhackweek' organization.
 
 You probably want to:
 
