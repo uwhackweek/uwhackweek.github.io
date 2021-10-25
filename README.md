@@ -19,3 +19,7 @@ You probably want to:
 ## 2019
 
 [Geohackweek](https://geohackweek.github.io)
+
+## Schedule
+
+Click [here](timeline/timeline.html) to view our overall schedule of events.
