@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn({ type: 'string', id: 'Event' });
+        dataTable.addColumn({ type: 'string', id: 'Stage' });
+        dataTable.addColumn({ type: 'string', id: 'style', role: 'style' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+          [ 'Time', 'Finished these!',  '#b4b4b4', new Date(2021, 1, 1), new Date() ],
+          [ 'Time', 'Working on these!', '#ddbea9', new Date(), new Date(2023, 3, 31) ],
+          [ 'SnowEx', 'pre',  '#264653', new Date(2021, 3, 11), new Date(2021, 7, 9) ],
+          [ 'SnowEx','event', '#2a9d8f', new Date(2021, 7, 12),  new Date(2021, 7, 16) ],
+          [ 'SnowEx', 'post', '#f4a261', new Date(2021, 7, 19),  new Date(2021, 8, 12) ],
+          [ 'ICESat-2', 'pre', '#264653', new Date(2021, 10, 1), new Date(2022, 3, 18) ],
+          [ 'ICESat-2','event', '#2a9d8f', new Date(2022, 3, 21),  new Date(2022, 3, 25) ],
+          [ 'ICESat-2', 'post', '#f4a261', new Date(2022, 3, 28),  new Date(2022, 4, 30) ],
+          [ 'SnowEx', 'pre', '#264653', new Date(2022, 2, 1), new Date(2022, 6, 10) ],
+          [ 'SnowEx', 'event',  '#2a9d8f', new Date(2022, 6, 13), new Date(2022, 6, 17) ],
+          [ 'SnowEx', 'post', '#f4a261', new Date(2022, 6, 21), new Date(2022, 7, 31) ],
+          [ 'Water', 'pre', '#264653', new Date(2022, 5, 1), new Date(2022, 8, 26) ],
+          [ 'Water', 'event', '#2a9d8f', new Date(2022, 8, 29), new Date(2022, 9, 2) ],
+          [ 'Water', 'post', '#f4a261', new Date(2022, 9, 6), new Date(2022, 10, 1) ],      
+          [ 'GeoSmart', 'pre','#264653', new Date(2022, 7, 12), new Date(2022, 11, 11) ],
+          [ 'GeoSmart', 'event', '#2a9d8f', new Date(2022, 11, 14), new Date(2022, 11, 18) ],
+          [ 'GeoSmart', 'post', '#f4a261', new Date(2022, 11, 21), new Date(2022, 12, 16) ],
+          [ 'Dog Aging', 'pre', '#264653', new Date(2022, 3, 18), new Date(2022, 8, 14)  ],
+          [ 'Dog Aging', 'event', '#2a9d8f', new Date(2022, 8, 18), new Date(2022, 8, 21) ],
+          [ 'Dog Aging', 'post', '#f4a261', new Date(2022, 8, 24), new Date(2022, 9, 16) ],
+          [ 'Anthro', 'tentative', '#b4b4b4', new Date(2022, 4,1), new Date(2022, 10, 1) ],
+          [ 'Weill neurohub', 'tentative', '#b4b4b4', new Date(2022, 4,1), new Date(2022, 10, 1) ],
+          [ 'Lead (eSci) - Anthony - ICESat-2', '1 mo', 'blue', new Date(2022, 3, 1),  new Date(2022, 4, 1) ],
+          [ 'Lead (eSci) - Anthony - SnowEx', '1 mo', 'blue', new Date(2022, 6, 1),  new Date(2022, 7, 1) ],
+          [ 'Lead (eSci) - Anthony - Water', '1 mo', 'blue', new Date(2022, 8, 1),  new Date(2022, 9, 1) ],
+          [ 'Lead (eSci) - Anthony - DAP', '0.5 mo', 'blue', new Date(2022, 9, 1),  new Date(2022, 9, 15) ],
+          [ 'Lead - Jessica - ICESat-2', '3 mo', 'orange',  new Date(2022, 1, 1),  new Date(2022, 4, 1) ], 
+          [ 'Collaboration - Charley - ICESat-2', '0.5 mo', 'purple',  new Date(2022, 3, 1),  new Date(2022, 3, 15) ], 
+          [ 'Collaboration - Charley - SnowEx', '0.5 mo', 'purple',  new Date(2022, 6, 1),  new Date(2022, 6, 15) ],
+          [ 'Collaboration - Charley - Water', '0.5 mo', 'purple',  new Date(2022, 8, 1),  new Date(2022, 8, 15) ],
+          [ 'Lead Technology (eSci) - Scott - ICESat-2', '2 mo', 'green', new Date(2022, 2, 1),  new Date(2022, 4, 1) ],
+          [ 'Lead Technology (eSci) - Scott - SnowEx', '1 mo', 'green', new Date(2022, 6, 1),  new Date(2022, 7, 1) ],
+          [ 'Lead of Projects - Axel - ICESat-2', '1 mo.', 'red', new Date(2022, 3, 1),  new Date(2022, 4, 1) ],
+          [ 'Lead of Education - TBD - ICESat-2', '1 mo.', 'brown', new Date(2022, 3, 1),  new Date(2022, 4, 1) ]       
+          ]);
+
+        var options = {
+            timeline: { groupByRowLabel: true
+                      },
+        };
+
+        chart.draw(dataTable, options);
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <h2>UW Hackweek as a service schedule</h2>
+    <div id="timeline" style="height: 1000px;"></div>
+
+    <center><a href = '../README.md'>Return to main page</a>
+
+    <p>This document was last modified <span id="demo"></span>.</p>
+
+  </center>
+
+<script>
+document.getElementById("demo").innerHTML = document.lastModified;
+</script>
+
+  </body>
+</html>
