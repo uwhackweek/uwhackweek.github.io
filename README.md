@@ -23,7 +23,3 @@ You probably want to:
 ## Schedule
 
 Click [here](timeline/timeline.html) to view our overall schedule of events.
-
-## Planning Guide
-
-Click [here](organizing-team/calendar-of-planning.png) to view a general timeline for hackweek organizing team meetings. ([link](https://app.diagrams.net/#G1UepPAYCizLE8SYNXu9mkjJICHDd4MK5M) to drawio file).
